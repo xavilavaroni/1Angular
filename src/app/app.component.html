@@ -1,0 +1,16 @@
+<h2>Carrito</h2>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Costo</th>
+  </tr>
+  <div *ngIf="mostrar">
+    <tr *ngFor="let x of productos">
+      <td>{{x.nombre}}</td>
+      <td>{{x.costo}}</td>
+    </tr>
+  </div>
+</table>
+<button *ngIf="!mostrar" (click)="hide()">Mostrar</button>
+<button *ngIf="mostrar" (click)="hide()">Ocultar</button>
